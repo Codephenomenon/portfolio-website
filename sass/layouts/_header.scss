@@ -1,0 +1,106 @@
+.header {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  background-color: transparent;
+  overflow: hidden;
+
+  &-overlay {
+    background: radial-gradient($umber, $black);
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    position: absolute;
+
+    &--text { 
+      color: $white;
+      font-size: 13rem;
+      text-transform: uppercase;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      top: 17vh;
+      text-shadow: 0 0 0.5rem $white,
+                   0 0 1rem $white,
+                   0 0 1.5rem $primary,
+                   0 0 2rem $primary,
+                   0 0 2.5rem $primary;
+      transition: all 0.3s cubic-bezier(.32,.58,.91,1.84);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: flicker 2s infinite;
+
+      &:hover {
+        text-shadow: none;
+        color: $primary;
+        animation: none;
+      }
+    }
+
+    &--sub {
+      color: $white; 
+      font-size: 4rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      top: 35vh;
+
+      @include respond(phone) {
+        top: 50vh;
+      }
+    }
+
+    &--intro {
+      position: absolute;
+      left: 50%;
+      top: 50vh;
+      transform: translateX(-50%);
+      overflow: hidden;
+
+      @include respond(phone) {
+        top: 60vh;
+      }
+    }
+
+    &--btn {
+      z-index: 5;
+      color: $white;
+
+      &:hover {
+        color: $umber;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        background: $white;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        top: 0;
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+        transition: right 0.7s ease-out;
+      }
+
+      &:hover:before {
+        right: -50%;
+      }
+    }
+  }
+
+    &-overlaySecondary {
+      background: $primary;
+      width: 100%;
+      height: 100vh;
+      z-index: 3;
+      position: absolute;
+      top: 0;
+    }
+
+}

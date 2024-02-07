@@ -1,0 +1,23 @@
+@keyframes flicker {
+  0% {
+    text-shadow: 0 0 0.5rem $white,
+                 0 0 1rem $white,
+                 0 0 1.5rem $primary,
+                 0 0 2rem $primary,
+                 0 0 2.5rem $primary;
+  }
+  50% {
+    text-shadow: 0 0 0.2rem $white,
+                 0 0 0.5rem $white,
+                 0 0 0.8rem $primary,
+                 0 0 1.2rem $primary,
+                 0 0 1.7rem $primary;
+  }
+  100% {
+    text-shadow: 0 0 0.5rem $white,
+                 0 0 1rem $white,
+                 0 0 1.5rem $primary,
+                 0 0 2rem $primary,
+                 0 0 2.5rem $primary;
+  }
+}

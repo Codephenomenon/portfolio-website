@@ -1,0 +1,103 @@
+.aboutme {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: url('../img/code.jpeg') no-repeat 50% 50%;
+  background-size: cover;
+  display: none;
+  background-attachment: fixed;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  &-container {
+    height: 65rem;
+    width: 120rem;
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    transform: translateY(25%) scale(0.95);
+    transition: all 0.5s ease-out;
+
+    &--panel {
+      margin: 0;
+      padding: 0;
+      transition: all 0.5s;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      position: relative;
+
+      &_1 {
+        background: $primary;
+      }
+      &_2 {
+        background: #E83307;
+      }
+      &_3 {
+        background: #FF5C08;
+      }
+      &_4 {
+        background: #FF9F05;
+      }
+
+      &-header {
+        font-size: 3rem;
+        color: $white;
+        position: relative;
+        transition: all 0.3s ease-in;
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 0.3rem;
+          bottom: 0;
+          left: 0;
+          background-color: transparent;
+          transform: scaleX(0);
+          transition: all 0.3s ease-out;
+        }
+
+        &:hover {
+          &:before {
+            background-color: $white;
+            transform: scaleX(1);
+          }
+        }
+
+      }
+
+      &-svg {
+        max-width: 70%;
+        display: none;
+
+        #pcScreen,
+        #pcPeg,
+        #pcBase {
+          transform: translateY(-2rem);
+          opacity: 0;
+          transition: all 0.2s ease;
+        }
+      }
+
+    }
+  }
+}
+
+.slideIn {
+  opacity: 1;
+  transform: translateY(0%) scale(1);
+  box-shadow: 0.5rem 0.5rem 1rem rgba($black, 0.7);
+}
+
+.enlarge {
+  flex: 5;
+  & > h2 {
+    transform: scale(1.2);
+    margin-bottom: 2rem;
+    text-shadow: 0.5rem 0.5rem 0.5rem rgba($black, 0.3);
+  }
+}

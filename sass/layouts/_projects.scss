@@ -1,0 +1,17 @@
+.projects {
+  width: 100vw;
+  height: 100vh;
+  background: $umber;
+  position: relative;
+  display: none;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 95vh;
+    bottom: 0;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: $white;
+  }
+}
