@@ -20,7 +20,7 @@
       display: inline-block;
       width: 100%;
       text-align: center;
-      top: 17vh;
+      top: 10rem;
       text-shadow: 0 0 0.5rem $white,
                    0 0 1rem $white,
                    0 0 1.5rem $primary,
@@ -37,6 +37,14 @@
         color: $primary;
         animation: none;
       }
+
+      @include respond(tablet-bg) {
+        font-size: 10rem;
+      }
+
+      @include respond(phone) {
+        top: 20rem;
+      }
     }
 
     &--sub {
@@ -49,28 +57,32 @@
       display: inline-block;
       width: 100%;
       text-align: center;
-      top: 35vh;
+      top: 30rem;
 
       @include respond(phone) {
-        top: 50vh;
+        top: 50rem;
       }
     }
 
     &--intro {
       position: absolute;
       left: 50%;
-      top: 50vh;
+      top: 50rem;
       transform: translateX(-50%);
       overflow: hidden;
 
       @include respond(phone) {
-        top: 60vh;
+        top: 60rem;
       }
     }
 
     &--btn {
       z-index: 5;
       color: $white;
+
+      @include respond(phone) {
+        padding: 20px 30px;
+      }
 
       &:hover {
         color: $umber;

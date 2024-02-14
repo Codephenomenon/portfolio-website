@@ -67,7 +67,7 @@ button {
       display: inline-block;
       width: 100%;
       text-align: center;
-      top: 17vh;
+      top: 10rem;
       text-shadow: 0 0 0.5rem #FFF, 0 0 1rem #FFF, 0 0 1.5rem #FF1105, 0 0 2rem #FF1105, 0 0 2.5rem #FF1105;
       transition: all 0.3s cubic-bezier(0.32, 0.58, 0.91, 1.84);
       position: absolute;
@@ -78,6 +78,12 @@ button {
         text-shadow: none;
         color: #FF1105;
         animation: none; }
+      @media only screen and (max-width: 75em) {
+        .header-overlay--text {
+          font-size: 10rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .header-overlay--text {
+          top: 20rem; } }
     .header-overlay--sub {
       color: #FFF;
       font-size: 4rem;
@@ -88,22 +94,25 @@ button {
       display: inline-block;
       width: 100%;
       text-align: center;
-      top: 35vh; }
+      top: 30rem; }
       @media only screen and (max-width: 37.5em) {
         .header-overlay--sub {
-          top: 50vh; } }
+          top: 50rem; } }
     .header-overlay--intro {
       position: absolute;
       left: 50%;
-      top: 50vh;
+      top: 50rem;
       transform: translateX(-50%);
       overflow: hidden; }
       @media only screen and (max-width: 37.5em) {
         .header-overlay--intro {
-          top: 60vh; } }
+          top: 60rem; } }
     .header-overlay--btn {
       z-index: 5;
       color: #FFF; }
+      @media only screen and (max-width: 37.5em) {
+        .header-overlay--btn {
+          padding: 20px 30px; } }
       .header-overlay--btn:hover {
         color: #101010; }
       .header-overlay--btn:before {
